@@ -37,7 +37,12 @@
         <div class="section-heading">
           <div>
             <p class="eyebrow">Вклад каждого</p>
-            <h2>Суммарные продажи за месяц</h2>
+            <h2>Суммарные продажи</h2>
+          </div>
+          <div class="period-toggle" id="periodToggle">
+            <button data-period="week">Неделя</button>
+            <button data-period="month" class="is-active">Месяц</button>
+            <button data-period="year">Год</button>
           </div>
         </div>
         <div class="chart-wrapper">
@@ -58,6 +63,18 @@
         </div>
         <div class="chart-wrapper">
           <canvas id="dailySalesChart"></canvas>
+        </div>
+      </div>
+
+      <div class="charts__block">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Сравнение</p>
+            <h2>Динамика по менеджерам</h2>
+          </div>
+        </div>
+        <div class="chart-wrapper">
+          <canvas id="comparisonChart"></canvas>
         </div>
       </div>
     </section>
