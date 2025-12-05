@@ -10,42 +10,61 @@
 <body>
   <header class="header">
     <div class="header__title-block">
-      <h1>Аналитика отдела продаж</h1>
-      <p class="header__subtitle">5 менеджеров, результаты за последний месяц</p>
+      <p class="eyebrow">Март 2024</p>
+      <h1>Аналитика 5 менеджеров продаж</h1>
+      <p class="header__subtitle">Динамика по каждому менеджеру: суммы за месяц и помесячные тренды.</p>
+    </div>
+    <div class="header__badge">
+      <span class="header__badge-title">Живые данные</span>
+      <span class="header__badge-desc">Сгенерированы для демо-дашборда</span>
     </div>
   </header>
 
   <main class="container">
     <section class="summary">
-      <h2>Итоги по менеджерам</h2>
-      <p class="summary__hint">
-        Суммарные продажи за месяц, тыс. ₽.
-      </p>
-
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Команда</p>
+          <h2>Итоги по менеджерам</h2>
+          <p class="summary__hint">Каждая карточка показывает город, итог за месяц, среднее значение и лучший день.</p>
+        </div>
+      </div>
       <div class="summary__grid" id="summaryCards"></div>
     </section>
 
     <section class="charts">
       <div class="charts__block">
-        <h2>Суммарные продажи за месяц</h2>
-        <canvas id="totalSalesChart"></canvas>
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Вклад каждого</p>
+            <h2>Суммарные продажи за месяц</h2>
+          </div>
+        </div>
+        <div class="chart-wrapper">
+          <canvas id="totalSalesChart"></canvas>
+        </div>
       </div>
 
       <div class="charts__block">
-        <div class="charts__header">
-          <h2>Динамика по дням</h2>
-          <label class="charts__label">
-            Менеджер:
+        <div class="section-heading charts__header">
+          <div>
+            <p class="eyebrow">Динамика</p>
+            <h2>Дневные продажи</h2>
+          </div>
+          <label class="charts__label" for="managerSelect">
+            Менеджер
             <select id="managerSelect"></select>
           </label>
         </div>
-        <canvas id="dailySalesChart"></canvas>
+        <div class="chart-wrapper">
+          <canvas id="dailySalesChart"></canvas>
+        </div>
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    Demo Sales Analytics
+    Demo Sales Analytics — сгенерированные данные для наглядности
   </footer>
 
   <script src="script.js"></script>
