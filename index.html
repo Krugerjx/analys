@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>Аналитика отдела продаж</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header class="header">
+    <div class="header__title-block">
+      <h1>Аналитика отдела продаж</h1>
+      <p class="header__subtitle">5 менеджеров, результаты за последний месяц</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="summary">
+      <h2>Итоги по менеджерам</h2>
+      <p class="summary__hint">
+        Суммарные продажи за месяц, тыс. ₽.
+      </p>
+
+      <div class="summary__grid" id="summaryCards"></div>
+    </section>
+
+    <section class="charts">
+      <div class="charts__block">
+        <h2>Суммарные продажи за месяц</h2>
+        <canvas id="totalSalesChart"></canvas>
+      </div>
+
+      <div class="charts__block">
+        <div class="charts__header">
+          <h2>Динамика по дням</h2>
+          <label class="charts__label">
+            Менеджер:
+            <select id="managerSelect"></select>
+          </label>
+        </div>
+        <canvas id="dailySalesChart"></canvas>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    Demo Sales Analytics
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
